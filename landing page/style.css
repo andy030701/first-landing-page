@@ -1,0 +1,265 @@
+@font-face {
+    font-family: "MontSerrat";
+    src: url("./assets/MontserratAlternates-Regular.ttf");
+  }
+
+:root/*creation de variables de couleur*/
+{
+    --violet:#d33bfd; /*couleur violet*/
+}
+
+  /*style du body*/  
+body
+{
+    margin: 0;/*enlver les marges auto du navigateur*/
+    font-family: 'MontSerrat',sans-serif;
+    color: white;   
+}
+
+/*style de l'en tete de la page*/
+header 
+{
+    background: linear-gradient(#13181d,#20212e,#341b47);/*couleur du degrade du noir jusqu'au violet*/
+}
+
+/*style de la barre de navigation*/
+header nav
+{
+    padding: 30px 5% 0 5%;/*espace qui separe les elements des bords du body*/
+    /*aligner le titre et les autres elements*/
+    display: flex;
+    flex-wrap: wrap;/*les elements vont venir passer a la ligne lorsque la taille de l'ecran va devenir tres petit*/
+    justify-content: space-between;/*espace entre les elements*/
+    align-items: center;
+}
+
+/*style du titre h1 dans header*/
+header nav h1
+{
+    margin: 0;/*enlver les marges autom*/
+    text-transform: uppercase;/*mettre le titre en majuscule*/
+    color: var(--violet);
+}
+
+/*style des elements dans right dans le header*/
+header nav .right
+{
+    display: flex;
+    align-items: center;/*aligner les elements dans le conteneur right*/
+}
+
+/*style les elements de right */
+header nav .right p
+{
+    margin: 0 15px 0 0;
+    color: #ccc;
+}
+
+/*style lorsque le curseur de l'user passe au dessus des elements dans right*/
+header nav .right p:hover
+{
+    color: white;/*coloriage en blanc*/
+}
+
+/*style du bouton dans le header*/
+header nav .right button
+{
+    padding: 5px 15px;/*marge interne dans le bouton pour l'aerer*/
+    font-size: 16px;/*taille du texte*/
+    background-color: inherit;/*couleur de fond du bouton qui herite du parent*/
+    border: 1px solid var(--violet);/*epaisseur ,type et couleur de la bordure du bouton*/
+    color: var(--violet);/*couleur du texte dans le bouton*/
+    border-radius: 5px;/*arrondis autour du bouton*/
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;/*transition de 0.5s de couleur du bouton et la couleur du texte dedans*/
+}
+
+/*style lorsque l'user passe au dessus du bouton*/
+header nav .right button:hover
+{
+    color: inherit;/*coloriage en blanc du texte dans le bouton lorsque la souris passe au dessus*/
+    background-color: var(--violet);/*coloriage du bouton en violet lorsque la souris passe dessus*/
+   
+}
+
+/*style de la presentation*/
+.presentation
+{
+    padding: 30px 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*presentations*/
+.presentation .product-presentation
+{
+   width: 100%;
+   flex-shrink: 3; /*gerer le rectrecissement des elements dans le div*/
+
+}
+
+/*style du h1 dans product presentation*/
+.presentation .product-presentation h1
+{
+    margin: 0;
+    font-size: 4vw;
+    width: 80%;
+
+}
+
+/*paragraphe dans la 1 ere section*/
+.presentation .product-presentation p
+{
+    font-weight: 300;
+    color: #e9e9e9;
+}
+
+/*le bouton dans la 1ere section*/
+.presentation .product-presentation button
+{
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*image dans image-presentation*/
+.presentation .image-presentation img 
+{
+   width: 100%;/*l'image prendra 100% de la largeur attribuee*/
+}
+/*style du bouton dans la 1 ere section*/
+.first .product-presentation button
+{
+    background-color: var(--violet);
+    border: 1px solid var(--violet);
+    color: white;
+    transition: background-color 0.5s ,color 0.5s;   
+
+}
+
+/*style du bouton lorsque l'user passe sa souris au dessus deu bouton*/
+.first .product-presentation button:hover
+{
+    background-color: inherit;
+    color: var(--violet);
+}
+
+/*on va styliser les 3 images dans la 1 ere section qui n'ont pas encore ete styliser*/
+.first .product-presentation .small-images{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*rapetisser les images*/
+.first .product-presentation .small-images .small
+{
+    padding: 20px;
+    background-color: #33314d;
+    margin: 0 15px 15px 0;
+    border-radius: 20px;
+    transition: filter 0.5s;
+}
+
+/*redimensionner la largeur les 3 images dans la 1 ere section*/
+.first .product-presentation .small-images .small img {
+    width: 120px;
+
+}
+
+/*style de la card renfermant les images une fois que l'user passe sa souris dessus*/
+.first .product-presentation .small-images .small:hover
+{
+    filter: brightness(50%);/*changer la luminosite de l'element une fois la souris passe dessus*/
+}
+
+.second{
+    margin: 0;
+    background-color: #13181d;
+}
+
+.second .product-presentation .new{
+    color: var(--violet);
+}
+
+/*style du bouton dans la 2 eme section*/
+.second .product-presentation button{
+    background-color: inherit;
+    border: 1px solid var(--violet);
+   color: var(--violet);
+   transition: background-color 0.5s ,color 0.5s;
+}
+
+
+/*style du bouton dans la 2 eme section lorsqu'on clique dessus*/
+.second .product-presentation button:hover
+{
+    color: white;
+    background-color: var(--violet);
+}
+
+/*style du footer*/
+footer
+{
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*style des h3 dans le footer*/
+footer h3
+{
+    color: var(--violet);
+}
+
+/*style des paragraphes dans le footer*/
+footer p
+{
+    cursor: pointer;
+    color: #ccc;
+}
+
+/*style du paragraphe lorsque la souris passe dessus*/
+footer p:hover
+{
+    color: white;
+}
+/*responsive*/
+@media screen and (max-width:640px) {
+    header nav .right p
+    {
+        display: none;/*les paragraphes ne seront pas afficher*/
+    }
+
+    .presentation .product-presentation h1
+    {
+        font-size: 2rem;/*la taille du paragraphe sera reduit*/
+    }
+
+    .presentation .image-presentation
+    {
+        display: none;
+    }
+    
+    .first .product-presentation .small-images .small img
+    {
+        width: 90px;
+    }
+    footer
+    {
+        justify-content: flex-start;/*aligne les elements du flexbox tout a gauche de l'ecran de l'user*/
+    }
+    footer .column {
+        width: 80%;
+    }
+}
